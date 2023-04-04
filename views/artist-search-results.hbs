@@ -1,0 +1,24 @@
+<!-- artist-search-results.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Search Results</title>
+</head>
+<body>
+  <h1>Search Results:</h1>
+  {{#each artists}}
+    <div>
+      <h2>{{this.name}}</h2>
+      {{#if this.images.length}}
+        <img src="{{this.images.[0].url}}" alt="{{this.name}} image">
+      {{else}}
+        <p>No image available</p>
+      {{/if}}
+    </div>
+  {{/each}}
+</body>
+</html>
+
+
